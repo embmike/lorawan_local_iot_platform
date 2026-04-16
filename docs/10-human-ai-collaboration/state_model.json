@@ -1,0 +1,49 @@
+{
+  "states": [
+    "splash",
+    "selection",
+    "brewing"
+  ],
+  "events": [
+    "startup_timeout_elapsed",
+    "select_drink",
+    "brewing_completed_and_hold_elapsed",
+    "reset_demo",
+    "reboot_board"
+  ],
+  "transitions": [
+    {
+      "from": "splash",
+      "event": "startup_timeout_elapsed",
+      "to": "selection"
+    },
+    {
+      "from": "selection",
+      "event": "select_drink",
+      "to": "brewing"
+    },
+    {
+      "from": "brewing",
+      "event": "brewing_completed_and_hold_elapsed",
+      "to": "selection"
+    },
+    {
+      "from": "any",
+      "event": "reset_demo",
+      "to": "selection"
+    },
+    {
+      "from": "any",
+      "event": "reboot_board",
+      "to": "splash"
+    }
+  ],
+  "observable_properties": [
+    "state",
+    "active coffee",
+    "brewing phase",
+    "progress",
+    "remaining time",
+    "protocol version"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "human_preparation": [
+    "define product purpose and user flow",
+    "declare fixed technical choices",
+    "declare naming rules",
+    "declare test boundaries",
+    "declare documentation structure",
+    "declare preferred tool paths",
+    "declare what the AI may decide alone"
+  ],
+  "ai_expected_behavior": [
+    "prefer existing project patterns",
+    "keep generated-code ownership intact",
+    "keep edits closely scoped",
+    "separate unit-test and system-test worlds clearly",
+    "update documentation when workflows change",
+    "document test goal and expected behavior"
+  ],
+  "naming_rules": {
+    "readability_first": true,
+    "use_underscores_for_long_names": true,
+    "prefer_explicit_behavior_words": true
+  },
+  "documentation_rules": {
+    "project_docs_in_english": true,
+    "test_files_document_goal_and_expected_behavior": true,
+    "machine_readable_facts_in_json": true,
+    "rationale_and_workflows_in_prose": true
+  },
+  "quality_gate": {
+    "before_done": [
+      "implementation works",
+      "tests are updated or added as needed",
+      "documentation reflects the current workflow",
+      "tool path and execution path are explicit"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "test_worlds": {
+    "host_side": {
+      "purpose": "<replace>",
+      "scope": [
+        "<replace>"
+      ],
+      "must_not_cover": [
+        "<replace>"
+      ]
+    },
+    "board_side": {
+      "purpose": "<replace>",
+      "scope": [
+        "<replace>"
+      ],
+      "transport_or_interface": "<replace>",
+      "must_not_cover": [
+        "<replace>"
+      ]
+    }
+  },
+  "quality_expectations": {
+    "done_criteria": [
+      "<replace>"
+    ],
+    "reporting_expectations": [
+      "<replace>"
+    ],
+    "naming_rules": [
+      "<replace>"
+    ]
+  },
+  "review_alignment_rule": "code, tests, and documentation must remain aligned"
+}

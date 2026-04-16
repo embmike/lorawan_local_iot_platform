@@ -1,0 +1,45 @@
+{
+  "project_identity": {
+    "project_name": "<replace>",
+    "repository_name": "<replace>",
+    "repository_role": "starting point for an AI-assisted engineering project",
+    "project_purpose": "<replace>",
+    "intended_user_or_operator": "<replace>",
+    "secondary_goal": "define and validate an AI-assisted engineering process for the next project"
+  },
+  "scope": {
+    "in_scope": [
+      "<replace>"
+    ],
+    "out_of_scope": [
+      "<replace>"
+    ],
+    "non_goals": [
+      "<replace>"
+    ]
+  },
+  "visible_flow": {
+    "summary": "<replace>",
+    "main_states_or_screens": [
+      "<replace>"
+    ],
+    "main_events": [
+      "<replace>"
+    ]
+  },
+  "human_inputs_required_at_start": [
+    "project purpose",
+    "visible user flow",
+    "technical constraints",
+    "ownership boundaries",
+    "test split",
+    "documentation destinations"
+  ],
+  "kickoff_expectations": {
+    "review_existing_repository_content": true,
+    "identify_missing_information": true,
+    "separate_together_vs_human_inputs": true,
+    "define_first_quality_gates": true,
+    "avoid_direct_implementation_before_framing": true
+  }
+}

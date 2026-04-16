@@ -1,0 +1,22 @@
+{
+  "document_type": "recovery_log",
+  "entries": [
+    {
+      "id": "REC-001",
+      "status": "open_or_closed",
+      "trigger": "blocking_conflict_detected_by_execution",
+      "problem": "Describe the conflict briefly",
+      "scope": "local_package_or_frame_level",
+      "impacted_artifacts": [
+        "artifact_a",
+        "artifact_b"
+      ],
+      "decision": "What was decided during clarification",
+      "updated_documents": [
+        "file_a",
+        "file_b"
+      ],
+      "resume_condition": "What must be true before execution resumes"
+    }
+  ]
+}

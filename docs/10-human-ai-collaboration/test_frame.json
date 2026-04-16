@@ -1,0 +1,44 @@
+{
+  "test_layers": [
+    {
+      "name": "unit_tests",
+      "language": "C++",
+      "framework": "GoogleTest/gMock",
+      "execution_world": "host PC",
+      "primary_targets": [
+        "simulation logic",
+        "presenter logic",
+        "model logic",
+        "formatting helpers",
+        "small application facades"
+      ]
+    },
+    {
+      "name": "system_tests",
+      "language": "Python",
+      "framework": "pytest",
+      "execution_world": "real board",
+      "transport": "USB CDC / COM on CN13",
+      "execution_path": "shell only",
+      "reporting": [
+        "JUnit XML always",
+        "HTML when pytest-html is installed"
+      ]
+    }
+  ],
+  "system_test_design_rule": {
+    "pattern": [
+      "defined initial state",
+      "one event",
+      "defined resulting state",
+      "explicit timeout when needed"
+    ]
+  },
+  "current_system_test_groups": [
+    "startup",
+    "smoke",
+    "drink transitions",
+    "brewing progress",
+    "selection matrix"
+  ]
+}

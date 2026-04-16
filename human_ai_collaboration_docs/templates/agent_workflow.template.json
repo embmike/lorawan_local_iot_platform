@@ -1,0 +1,130 @@
+{
+  "working_model": {
+    "human_reads_handbook_first": true,
+    "chatgpt_used_for_gate_to_gate_clarification": true,
+    "codex_used_for_bounded_execution_after_gate_pass": true,
+    "return_to_chatgpt_when_questions_or_problems_appear": true
+  },
+  "roles": {
+    "human": {
+      "responsibilities": [
+        "define intent and priorities",
+        "approve or reject assumptions",
+        "release quality gates",
+        "review final results",
+        "select the next work priority"
+      ]
+    },
+    "chatgpt": {
+      "responsibilities": [
+        "inspect repository state",
+        "identify gaps",
+        "structure the frame",
+        "define and review quality gates",
+        "prepare work packages",
+        "clarify questions and problems",
+        "keep reasoning visible",
+        "recommend the next small step"
+      ]
+    },
+    "chatgpt_codex": {
+      "responsibilities": [
+        "implement bounded repository-local work",
+        "edit multiple files consistently",
+        "refactor inside the approved frame",
+        "support tests and documentation updates"
+      ]
+    }
+  },
+  "quality_gates": [
+    {
+      "gate_id": "G1",
+      "name": "project_frame_ready",
+      "goal": "project purpose, visible flow, and non-goals are clear",
+      "required_inputs": [
+        "project purpose",
+        "visible flow",
+        "non-goals"
+      ],
+      "pass_condition": "the current project frame is concrete enough to avoid broad solution guessing"
+    },
+    {
+      "gate_id": "G2",
+      "name": "technical_frame_ready",
+      "goal": "technical constraints and ownership boundaries are clear",
+      "required_inputs": [
+        "platform",
+        "toolchain",
+        "authoritative tools",
+        "generated vs. handwritten ownership"
+      ],
+      "pass_condition": "the AI can work without inventing the wrong technical world"
+    },
+    {
+      "gate_id": "G3",
+      "name": "quality_frame_ready",
+      "goal": "test split, documentation map, and done criteria are visible",
+      "required_inputs": [
+        "test split",
+        "documentation destinations",
+        "done criteria"
+      ],
+      "pass_condition": "quality expectations are explicit enough for bounded work"
+    },
+    {
+      "gate_id": "G4",
+      "name": "work_package_ready",
+      "goal": "the next work package is small, bounded, and reviewable",
+      "required_inputs": [
+        "scope",
+        "constraints",
+        "expected output",
+        "acceptance criteria",
+        "review responsibility"
+      ],
+      "pass_condition": "ChatGPT Codex can execute without broad ambiguity"
+    },
+    {
+      "gate_id": "G5",
+      "name": "result_accepted",
+      "goal": "the result fits the frame and is ready for continuation",
+      "required_inputs": [
+        "delivered result",
+        "review findings",
+        "new open points"
+      ],
+      "pass_condition": "code, tests, and documentation are aligned and open points are visible"
+    },
+    {
+      "gate_id": "G6",
+      "name": "next_package_selected",
+      "goal": "the next small step is selected based on the current result and open points",
+      "required_inputs": [
+        "current gate status",
+        "open points",
+        "current risks",
+        "next-step recommendation"
+      ],
+      "pass_condition": "the next bounded clarification or execution step is explicitly chosen"
+    }
+  ],
+  "return_to_clarification_triggers": [
+    "repository structure differs from expectation",
+    "required input is missing",
+    "architecture conflict appears",
+    "ownership boundary is unclear",
+    "test approach is unclear",
+    "expected output changes",
+    "new assumptions become necessary"
+  ],
+  "recommended_prompt_sequence": [
+    "human_ai_kickoff_prompt.md",
+    "repository_inventory_prompt.md",
+    "gap_analysis_prompt.md",
+    "quality_gate_review_prompt.md",
+    "missing_input_recovery_prompt.md",
+    "work_package_planning_prompt.md",
+    "end_of_package_review_prompt.md",
+    "next_step_planning_prompt.md"
+  ]
+}

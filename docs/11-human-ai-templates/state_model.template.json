@@ -1,0 +1,35 @@
+{
+  "states": [
+    "<state_1>",
+    "<state_2>",
+    "<state_3>"
+  ],
+  "events": [
+    "<event_1>",
+    "<event_2>",
+    "<event_3>"
+  ],
+  "transitions": [
+    {
+      "from": "<state_1>",
+      "event": "<event_1>",
+      "to": "<state_2>"
+    },
+    {
+      "from": "<state_2>",
+      "event": "<event_2>",
+      "to": "<state_3>"
+    }
+  ],
+  "time_driven_rules": [
+    {
+      "from": "<state_name>",
+      "condition": "<timeout_or_condition>",
+      "to": "<next_state>"
+    }
+  ],
+  "observable_outputs": [
+    "<output_1>",
+    "<output_2>"
+  ]
+}

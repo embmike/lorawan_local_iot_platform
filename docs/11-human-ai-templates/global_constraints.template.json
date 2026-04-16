@@ -1,0 +1,25 @@
+{
+  "document_type": "global_constraints",
+  "purpose": "Always-load compact constraint set for AI-assisted execution",
+  "tool_authority": {
+    "generated_tools_authoritative": [
+      "STM32CubeMX",
+      "TouchGFX Designer"
+    ],
+    "do_not_manually_rewrite_generated_areas": true
+  },
+  "ownership_boundaries": {
+    "generated": "declare project-specific generated paths",
+    "handwritten": "declare project-specific handwritten paths",
+    "stable_interfaces": "declare stable interface boundaries"
+  },
+  "testing": {
+    "unit_test_world": "host",
+    "system_test_world": "target board",
+    "system_test_transport": "declare project-specific transport"
+  },
+  "naming_rules": {
+    "prefer_explicit_names": true,
+    "keep_long_names_readable": true
+  }
+}

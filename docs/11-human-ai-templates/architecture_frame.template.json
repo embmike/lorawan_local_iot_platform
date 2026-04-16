@@ -1,0 +1,37 @@
+{
+  "technical_world": {
+    "target_platform": "<replace>",
+    "toolchain": [
+      "<replace>"
+    ],
+    "major_frameworks_or_tools": [
+      "<replace>"
+    ],
+    "authoritative_generators": [
+      "<replace>"
+    ]
+  },
+  "ownership_boundaries": {
+    "generated_code_areas": [
+      "<replace>"
+    ],
+    "handwritten_code_areas": [
+      "<replace>"
+    ],
+    "stable_interfaces": [
+      "<replace>"
+    ],
+    "do_not_edit_directly": [
+      "<replace>"
+    ]
+  },
+  "workflows": {
+    "accepted_build_workflow": "<replace>",
+    "accepted_debug_workflow": "<replace>",
+    "accepted_flash_workflow": "<replace>",
+    "accepted_test_workflow": "<replace>"
+  },
+  "architecture_constraints": [
+    "<replace>"
+  ]
+}

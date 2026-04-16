@@ -1,0 +1,32 @@
+{
+  "project_name": "coffee_machine",
+  "project_type": "embedded demonstrator",
+  "primary_user": "application user on the STM32H750B-DK board",
+  "primary_goal": "show a complete touch-driven coffee-machine UI flow on real hardware",
+  "secondary_goal": "capture a reusable human-AI collaboration model for future embedded projects",
+  "visible_user_flow": [
+    "splash screen",
+    "automatic transition to selection",
+    "user selects a drink",
+    "brewing screen with progress and countdown",
+    "automatic return to selection"
+  ],
+  "supported_drinks": [
+    "espresso",
+    "cappuccino",
+    "latte",
+    "americano"
+  ],
+  "out_of_scope": [
+    "real appliance backend control",
+    "safety-critical behavior",
+    "pump, heater, valve, or sensor control"
+  ],
+  "roles": [
+    "application_user",
+    "software_developer",
+    "tester"
+  ],
+  "documentation_language": "English",
+  "working_conversation_language": "German"
+}
